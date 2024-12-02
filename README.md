@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+Server Run: rails server
+Compile assets: rake assets:precompile
+Scss compile: npm run watch:css
