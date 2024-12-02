@@ -20,6 +20,7 @@ gem "jbuilder"
 # Bootstrap
 gem "dartsass-rails"
 gem "bootstrap", "~> 5.3.3"
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
