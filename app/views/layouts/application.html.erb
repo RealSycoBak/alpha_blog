@@ -23,10 +23,16 @@
     <%= stylesheet_link_tag "custom",  "data-turbo-track": "reload" %>
   </head>
 
-  <body>
-  
+  <body class="d-flex flex-column">
     <%= render "layouts/navigation" %>
 
+    <div id="page-content">
     <%= yield %>
+    </div>
+    <footer id="sticky-footer" class="py-4 bg-dark text-white">
+  <div class="container text-center">
+    <small>Copyright &copy; Alpha Blog </small>
+  </div>
+</footer>
   </body>
 </html>
