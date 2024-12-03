@@ -74,3 +74,5 @@ group :production do
 end
 
 gem "cssbundling-rails", "~> 1.4"
+
+gem "hotwire-rails", "~> 0.1.3"
