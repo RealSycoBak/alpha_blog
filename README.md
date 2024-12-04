@@ -10,7 +10,7 @@ Ruby 3.3.6
 
 Rails 8.0.0
 
-Ensure these versions are installed before running the application.
+Ensure these versions are installed before running the application!
 
 ## System Dependencies
 PostgreSQL 13 or higher for database management.
