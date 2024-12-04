@@ -1,29 +1,95 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Alpha Blog
 
-Things you may want to cover:
+Alpha Blog is a Ruby on Rails application that allows users to create, edit, and manage blog posts. Developed by Alon Baker, this application serves as a foundational project to showcase Rails capabilities and MVC design principles.
 
-* Ruby version
+## Versions
+This application uses:
 
-* System dependencies
+Ruby 3.3.6
 
-* Configuration
+Rails 8.0.0
 
-* Database creation
+Ensure these versions are installed before running the application.
 
-* Database initialization
+## System Dependencies
+PostgreSQL 13 or higher for database management.
 
-* How to run the test suite
+Node.js and Yarn for managing JavaScript assets.
 
-* Services (job queues, cache servers, search engines, etc.)
+Bundler for Ruby gem dependencies.
 
-* Deployment instructions
-
-* ...
+## Configuration
 
 
-Server Run: rails server
-Compile assets: rake assets:precompile
-Scss compile: npm run watch:css
+
+
+Clone the repository:
+
+```bash
+  git clone https://github.com/RealSycoBak/alpha_blog.git
+
+```
+
+Navigate into the project directory:
+
+```bash
+  cd alpha_blog
+```
+
+Install dependencies:
+
+```bash
+  bundle install
+  yarn install
+```
+
+## Database Creation
+
+Run the following command to create the database:
+
+```bash
+  rails db:create
+```
+
+## Database Initialization
+
+Migrate the database and seed any initial data:
+
+```bash
+  rails db:migrate
+  rails db:seed
+```
+
+## Deployment
+### Windows
+Run the application with the following command:
+
+```bash
+  .\start.bat
+```
+
+### Linux/Mac
+Run the application with the following command:
+
+```bash
+  bin/dev
+```
+
+Modify the Procfile for web server configuration if necessary:
+
+```bash
+  web: bin/rails server -p 3000
+```
+
+# Additional Notes:
+Access the application by navigating to http://localhost:3000 once the server is running.
+
+Contributions and feature requests are welcome!
+
+
+
+
+## Author
+
+- [@RealSycoBak](https://www.github.com/RealSycoBak) (Alon Baker)
