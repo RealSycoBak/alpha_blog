@@ -78,3 +78,5 @@ gem "cssbundling-rails", "~> 1.4"
 gem "hotwire-rails", "~> 0.1.3"
 
 gem "jsbundling-rails", "~> 1.3"
+
+gem 'will_paginate', '~> 4.0'
