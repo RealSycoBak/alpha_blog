@@ -1,5 +1,0 @@
-web: rails server -p 3000
-css: yarn watch:css
-js: yarn build --watch
-
-

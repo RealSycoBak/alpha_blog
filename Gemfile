@@ -18,9 +18,9 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Bootstrap
-gem "dartsass-rails"
-gem "bootstrap", "~> 5.3.3"
-gem 'sprockets-rails', :require => 'sprockets/railtie'
+# gem "dartsass-rails"
+# gem "bootstrap", "~> 5.3.3"
+# gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
@@ -73,10 +73,12 @@ group :production do
   gem 'pg'
 end
 
-gem "cssbundling-rails", "~> 1.4"
+# gem "cssbundling-rails", "~> 1.4"
 
-gem "hotwire-rails", "~> 0.1.3"
+# gem "hotwire-rails", "~> 0.1.3"
 
-gem "jsbundling-rails", "~> 1.3"
+# gem "jsbundling-rails", "~> 1.3"
 
 gem 'will_paginate', '~> 4.0'
+
+# gem 'jquery-rails'
