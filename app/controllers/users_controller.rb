@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:success] = "Welcome to the alpha blog #{@user.username}"
+      flash[:notice] = "Welcome to the alpha blog #{@user.username}"
       redirect_to user_path(@user)
     else
       render 'new'
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1 or /users/1.json
   def update
     if @user.update(user_params)
-      flash[:success] = "Your account was updated successfully"
+      flash[:notice] = "Your account was updated successfully"
       redirect_to articles_path
     else
       render 'edit'
@@ -48,7 +48,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     session[:user_id] = nil if @user == curent_user
-    flash[:danger] = "Account and all associated articles have been deleted"
+    flash[:alert] = "Account and all associated articles have been deleted"
     redirect_to articles_path
   end
 
@@ -65,7 +65,7 @@ class UsersController < ApplicationController
 
     def require_same_user
       if current_user != @user && !current_user.admin?
-        flash[:danger] = "You can only edit or delete your account"
+        flash[:alert] = "You can only edit or delete your account"
         redirect_to @user
       end
     end

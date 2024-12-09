@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user = current_user
     if @article.save
-      flash[:success] = "Article was successfully created"
+      flash[:notice] = "Article was successfully created"
       redirect_to article_path(@article)
     else
       render 'new'
@@ -36,7 +36,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1 or /articles/1.json
   def update
     if @article.update(article_params)
-      flash[:success] = "Article was successfully updated"
+      flash[:notice] = "Article was successfully updated"
       redirect_to article_path(@article)
     else
       render 'edit'
@@ -46,7 +46,7 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1 or /articles/1.json
   def destroy
     @article.destroy
-    flash[:danger] = "Article was successfully deleted"
+    flash[:alert] = "Article was successfully deleted"
     redirect_to articles_path
   end
 
@@ -63,7 +63,7 @@ class ArticlesController < ApplicationController
 
     def require_same_user
       if current_user != @article.user && !current_user.admin?
-        flash[:danger] = "You can only edit or delete your own article"
+        flash[:alert] = "You can only edit or delete your own article"
         redirect_to @article
       end
     end
