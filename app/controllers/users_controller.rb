@@ -47,7 +47,7 @@ class UsersController < ApplicationController
   # DELETE /users/1 or /users/1.json
   def destroy
     @user.destroy
-    session[:user_id] = nil if @user == curent_user
+    session[:user_id] = nil if @user == current_user
     flash[:alert] = "Account and all associated articles have been deleted"
     redirect_to articles_path
   end
